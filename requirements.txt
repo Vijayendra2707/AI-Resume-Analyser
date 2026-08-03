@@ -1,0 +1,26 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+pydantic
+pandas
+numpy
+scikit-learn
+spacy
+nltk
+PyPDF2
+pdfplumber
+joblib
+sentence-transformers
+torch
+transformers
+python-docx
+requests
+groq
+faiss-cpu
+python-multipart
+python-docx
+python-docx2txt
+python-magic
+python-magic-bin; platform_system=="Windows"
+python-dateutil

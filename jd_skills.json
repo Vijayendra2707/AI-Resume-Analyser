@@ -1,0 +1,83 @@
+{
+    "Frontend Developer": [
+        "react",
+        "bootstrap",
+        "responsive design",
+        "javascript",
+        "rest api",
+        "html",
+        "css",
+        "angular"
+    ],
+    "Backend Developer": [
+        "node.js",
+        "java",
+        "mysql",
+        "databases",
+        "sql",
+        "authentication",
+        "git",
+        "postgresql",
+        "python",
+        "rest apis"
+    ],
+    "Python Developer": [
+        "django",
+        "sql",
+        "flask",
+        "backend development",
+        "apis",
+        "numpy",
+        "pandas",
+        "python"
+    ],
+    "Data Scientist": [
+        "scikit-learn",
+        "tensorflow",
+        "predictive modeling",
+        "pandas",
+        "statistics",
+        "numpy",
+        "machine learning",
+        "python",
+        "data visualization"
+    ],
+    "Full Stack Developer": [
+        "react",
+        "node.js",
+        "javascript",
+        "mysql",
+        "mongodb",
+        "express",
+        "rest apis",
+        "html",
+        "css"
+    ],
+    "Mobile App Developer (iOS/Android)": [
+        "ios",
+        "firebase",
+        "android",
+        "kotlin",
+        "flutter",
+        "react native",
+        "java",
+        "swift"
+    ],
+    "Machine Learning Engineer": [
+        "pytorch",
+        "tensorflow",
+        "machine learning",
+        "nlp",
+        "python",
+        "deep learning"
+    ],
+    "Cloud Engineer": [
+        "ci/cd",
+        "networking",
+        "azure",
+        "aws",
+        "linux",
+        "kubernetes",
+        "docker"
+    ]
+}
