@@ -1,5 +1,6 @@
 import os
 import io # 🔴 Add this
+from pathlib import Path
 import pickle
 import datetime
 import traceback
@@ -49,11 +50,16 @@ app.add_middleware(
 
 # 2. ML Model Loading
 try:
-    model = pickle.load(open("model.pkl", "rb"))
+    BASE_DIR = Path(__file__).resolve().parent
+    MODEL_PATH = BASE_DIR / "model.pkl"
+
+    with open(MODEL_PATH, "rb") as f:
+        model = pickle.load(f)
+
     FEATURES = ["similarity", "matched", "missing", "percent", "length"]
+
 except Exception as e:
     print(f"⚠️ Model Warning: {e}. Predictive features may be disabled.")
-
 # --- DEPENDENCIES ---
 
 def get_db():
