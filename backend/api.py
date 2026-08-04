@@ -263,28 +263,41 @@ async def analyze_resume(
     # 8. Report Generation & DB Persistence
     try:
         pdf_path = generate_resume_report(response)
-        BASE_URL = os.getenv("BASE_URL")
+
+        BASE_URL = os.getenv(
+            "BASE_URL",
+            "https://ai-resume-analyser-backend-xyg3.onrender.com"
+        )
 
         response["report_url"] = (
             f"{BASE_URL}/reports/{os.path.basename(pdf_path)}"
         )
+
         new_record = AnalysisRecord(
             user_id=current_user.id,
             candidate_name=response["candidate_name"],
             score=display_score,
             shortlisted=shortlisted,
             confidence=confidence,
-            # Convert sets to lists so MySQL JSON column can accept them
-            matched_skills=list(matched_set), 
+            matched_skills=list(matched_set),
             missing_skills=list(missing_set),
-            report_url=response["report_url"] 
+            report_url=response["report_url"],
         )
+
         db.add(new_record)
         db.commit()
-    except Exception as e:
-        db.rollback()
-        print(f"Persistence Error: {e}")
+        db.refresh(new_record)
 
+        print("✅ SAVED")
+        print(new_record.id)
+
+    except Exception:
+        import traceback
+
+        db.rollback()
+        traceback.print_exc()
+
+        raise
     return response
 
 # --- DATA RETRIEVAL ENDPOINTS ---
