@@ -27,7 +27,7 @@ function Signup() {
       formData.append("email", email);
       formData.append("password", password);
 
-      const res = await axios.get(
+      const res = await axios.post(
           `${API_URL}/signup`,
         formData
       );

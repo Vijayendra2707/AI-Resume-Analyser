@@ -18,7 +18,7 @@ function Login() {
       formData.append("username", email);
       formData.append("password", password);
 
-      const res = await axios.get(
+      const res = await axios.post(
           `${API_URL}/login`,
         formData
       );
