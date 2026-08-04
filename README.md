@@ -14,6 +14,34 @@ An AI-powered Resume Screening Platform that leverages **Natural Language Proces
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Secure Authentication
+Modern login interface with JWT-based authentication and role-based access control for candidates and administrators.
+
+![Login](screenshots/login.png)
+
+---
+
+### 🤖 AI Resume Analysis Dashboard
+Comprehensive AI-powered candidate evaluation featuring Fitment Index, semantic similarity, skill visualization, confidence score, and personalized recommendations.
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### 🧠 Skill Gap Analysis & Learning Recommendations
+Detailed breakdown of matched and missing skills categorized by technical skills, tools, and concepts, along with curated learning resources.
+
+![Skill Analysis](screenshots/skills.png)
+
+---
+
+### 📜 Resume Analysis History
+Track previous resume evaluations, view fitment scores, shortlist status, and download recruiter-ready PDF reports.
+
+![History](screenshots/history.png)
+
 # ✨ Features
 
 ## 👤 Candidate Portal
