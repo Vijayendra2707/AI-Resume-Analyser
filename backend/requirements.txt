@@ -3,9 +3,6 @@ uvicorn
 python-multipart
 python-dotenv
 
-SQLAlchemy
-psycopg2-binary
-
 pandas
 numpy
 scikit-learn
@@ -19,6 +16,11 @@ docx2txt
 groq
 requests
 
-jose
+SQLAlchemy
+psycopg2-binary
+
+python-jose[cryptography]
+bcrypt
+
 python-magic
 python-dateutil

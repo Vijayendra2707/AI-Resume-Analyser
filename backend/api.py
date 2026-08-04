@@ -14,20 +14,20 @@ from sqlalchemy.orm import Session
 
 # --- Security & Auth ---
 from jose import JWTError, jwt
-from auth import (
+from backend.auth import (
     SECRET_KEY, ALGORITHM, get_password_hash, 
     verify_password, create_access_token
 )
 
 # --- Database Models & AI Utilities ---
 # Ensure these match your existing files exactly
-from db import SessionLocal, engine, Base, User, AnalysisRecord, init_db
-from preprocess import preprocess_text
-from similarity import similarity_score
-from skill_extractor import extract_skills_llm
-from recommend import get_top_missing_skills, generate_course_links
-from utils import extract_text_from_pdf, extract_text_from_docx
-from report_generator import generate_resume_report
+from backend.db import SessionLocal, engine, Base, User, AnalysisRecord, init_db
+from backend.preprocess import preprocess_text
+from backend.similarity import similarity_score
+from backend.skill_extractor import extract_skills_llm
+from backend.recommend import get_top_missing_skills, generate_course_links
+from backend.utils import extract_text_from_pdf, extract_text_from_docx
+from backend.report_generator import generate_resume_report
 
 # 1. Initialize App & DB
 app = FastAPI(title="AI Resume Screener Pro 2026")
@@ -257,7 +257,11 @@ async def analyze_resume(
     # 8. Report Generation & DB Persistence
     try:
         pdf_path = generate_resume_report(response)
-        response["report_url"] = f"http://localhost:8000/reports/{os.path.basename(pdf_path)}"
+        BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
+
+        response["report_url"] = (
+            f"{BASE_URL}/reports/{os.path.basename(pdf_path)}"
+        )
         new_record = AnalysisRecord(
             user_id=current_user.id,
             candidate_name=response["candidate_name"],
