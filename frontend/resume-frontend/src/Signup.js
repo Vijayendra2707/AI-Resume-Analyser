@@ -28,7 +28,7 @@ function Signup() {
       formData.append("password", password);
 
       const res = await axios.get(
-          `${API_URL}/Signup`,
+          `${API_URL}/signup`,
         formData
       );
 

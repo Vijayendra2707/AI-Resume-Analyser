@@ -19,7 +19,7 @@ function Login() {
       formData.append("password", password);
 
       const res = await axios.get(
-          `${API_URL}login`,
+          `${API_URL}/login`,
         formData
       );
 
