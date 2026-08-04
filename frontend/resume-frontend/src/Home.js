@@ -30,7 +30,7 @@ function Home() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get(
+      const res = await axios.post(
           `${API_URL}/analyze_resume`,
         formData,
         {
