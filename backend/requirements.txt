@@ -19,5 +19,6 @@ docx2txt
 groq
 requests
 
+jose
 python-magic
 python-dateutil
