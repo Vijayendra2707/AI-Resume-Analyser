@@ -216,6 +216,10 @@ async def analyze_resume(
     # 5. Fitment Index (UX Normalization)
     # We apply a rescaling for shortlisted candidates: 60 + (raw * 0.35)
     display_score = raw_total
+    display_score = float(display_score)
+    confidence = float(confidence)
+    sim = float(sim)
+    raw_total = float(raw_total)
     if shortlisted == 1:
         display_score = round(60 + (raw_total * 0.35), 2)
     display_score = min(display_score, 98.5)
@@ -274,15 +278,15 @@ async def analyze_resume(
         )
 
         new_record = AnalysisRecord(
-            user_id=current_user.id,
-            candidate_name=response["candidate_name"],
-            score=display_score,
-            shortlisted=shortlisted,
-            confidence=confidence,
-            matched_skills=list(matched_set),
-            missing_skills=list(missing_set),
-            report_url=response["report_url"],
-        )
+        user_id=int(current_user.id),
+        candidate_name=response["candidate_name"],
+        score=float(display_score),
+        shortlisted=int(shortlisted),
+        confidence=float(confidence),
+        matched_skills=list(matched_set),
+        missing_skills=list(missing_set),
+        report_url=response["report_url"],
+    )
 
         db.add(new_record)
         db.commit()
