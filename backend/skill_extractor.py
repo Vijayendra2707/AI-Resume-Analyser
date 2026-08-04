@@ -2,8 +2,8 @@ import json
 import os
 from dotenv import load_dotenv
 from groq import Groq
-from resume_parser import extract_text
-from preprocess import preprocess_text
+from backend.resume_parser import extract_text
+from backend.preprocess import preprocess_text
 
 load_dotenv()  # loads .env file
 api_key = os.getenv("GROQ_API_KEY")

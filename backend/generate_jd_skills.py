@@ -1,5 +1,5 @@
 import json
-from skill_extractor import extract_skills_llm
+from backend.skill_extractor import extract_skills_llm
 
 # Same JD bank you used earlier
 jd_bank = {

@@ -1,10 +1,10 @@
 import pandas as pd
 import random
 # Ensure these imports match your filenames exactly
-from similarity import similarity_score, skill_match_score
-from skill_extractor import extract_skills_llm
-from preprocess import preprocess_text
-from skill_gap import skill_gap
+from backend.similarity import similarity_score, skill_match_score
+from backend.skill_extractor import extract_skills_llm
+from backend.preprocess import preprocess_text
+from backend.skill_gap import skill_gap
 
 # 1. Load and Sample
 df = pd.read_csv("updated_dataset.csv")

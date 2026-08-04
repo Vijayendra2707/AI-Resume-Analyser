@@ -1,7 +1,7 @@
 import re
-from resume_parser import extract_text
-from preprocess import preprocess_text
-from skill_extractor import extract_skills_llm
+from backend.resume_parser import extract_text
+from backend.preprocess import preprocess_text
+from backend.skill_extractor import extract_skills_llm
 
 def normalize_skill(skill):
     """

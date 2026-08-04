@@ -1,7 +1,7 @@
 import pandas as pd
 import os
-from skill_extractor import extract_skills_llm
-from section_extractor import extract_relevant_section
+from backend.skill_extractor import extract_skills_llm
+from backend.section_extractor import extract_relevant_section
 
 resume_df = pd.read_csv("resume_sample.csv")
 

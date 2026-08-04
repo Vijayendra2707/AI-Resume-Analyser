@@ -2,10 +2,10 @@ import pandas as pd
 import random
 import time
 
-from preprocess import preprocess_text
-from skill_extractor import extract_skills_llm
-from similarity import similarity_score, skill_match_score
-from skill_gap import skill_gap
+from backend.preprocess import preprocess_text
+from backend.skill_extractor import extract_skills_llm
+from backend.similarity import similarity_score, skill_match_score
+from backend.skill_gap import skill_gap
 
 # ---------------- JD BANK ----------------
 jd_bank = {

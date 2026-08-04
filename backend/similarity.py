@@ -1,8 +1,8 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from resume_parser import extract_text
-from preprocess import preprocess_text
-from skill_extractor import extract_skills_llm
+from backend.resume_parser import extract_text
+from backend.preprocess import preprocess_text
+from backend.skill_extractor import extract_skills_llm
 def similarity_score(resume_text, jd_text):
     tfidf = TfidfVectorizer()
     vectors = tfidf.fit_transform([resume_text, jd_text])
