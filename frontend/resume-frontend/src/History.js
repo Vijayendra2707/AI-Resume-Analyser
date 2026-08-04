@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 function History() {
   const [records, setRecords] = useState([]);
 
@@ -8,9 +10,8 @@ function History() {
     const fetchHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-
-        const res = await axios.get(
-          "http://localhost:8000/history",
+          const res = await axios.get(
+          `${API_URL}/history`,
           {
             headers: {
               Authorization: `Bearer ${token}`

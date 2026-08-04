@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 function Home() {
   const [file, setFile] = useState(null);
   const [jd, setJd] = useState("");
@@ -28,8 +30,8 @@ function Home() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.post(
-        "http://localhost:8000/analyze_resume",
+      const res = await axios.get(
+          `${API_URL}/analyze_resume`,
         formData,
         {
           headers: {

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,8 +18,8 @@ function Login() {
       formData.append("username", email);
       formData.append("password", password);
 
-      const res = await axios.post(
-        "http://localhost:8000/login",
+      const res = await axios.get(
+          `${API_URL}login`,
         formData
       );
 

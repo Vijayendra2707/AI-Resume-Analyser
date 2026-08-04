@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,8 +27,8 @@ function Signup() {
       formData.append("email", email);
       formData.append("password", password);
 
-      const res = await axios.post(
-        "http://localhost:8000/signup",
+      const res = await axios.get(
+          `${API_URL}signup`,
         formData
       );
 
