@@ -263,7 +263,7 @@ async def analyze_resume(
     # 8. Report Generation & DB Persistence
     try:
         pdf_path = generate_resume_report(response)
-        BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
+        BASE_URL = os.getenv("BASE_URL")
 
         response["report_url"] = (
             f"{BASE_URL}/reports/{os.path.basename(pdf_path)}"
