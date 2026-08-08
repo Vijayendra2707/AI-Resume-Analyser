@@ -6,12 +6,11 @@ An AI-powered Resume Screening Platform that leverages **Natural Language Proces
 
 ## 🌐 Live Demo
 
-**Frontend:** [https://your-frontend-url.onrender.com](https://ai-resume-analyser-frontend-27mo.onrender.com)
+**Frontend:** [https://ai-resume-analyser-frontend-27mo.onrender.com](https://ai-resume-analyser-frontend-27mo.onrender.com)
 
-**Backend API:** [https://your-backend-url.onrender.com](https://ai-resume-analyser-backend-xyg3.onrender.com)
+**Backend API:** [https://ai-resume-analyser-backend-xyg3.onrender.com](https://ai-resume-analyser-backend-xyg3.onrender.com)
 
-**API Documentation:** [https://your-backend-url.onrender.com/docs](https://ai-resume-analyser-backend-xyg3.onrender.com/docs)
-
+**API Documentation:** [https://ai-resume-analyser-backend-xyg3.onrender.com/docs](https://ai-resume-analyser-backend-xyg3.onrender.com/docs)
 ---
 
 ## 📸 Screenshots
